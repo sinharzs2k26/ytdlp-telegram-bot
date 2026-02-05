@@ -640,7 +640,8 @@ def main():
     # Add handlers
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help_command))
-     application.add_handler(CommandHandler("cancel", cancel))
+    application.add_handler(CommandHandler("cookies", cookies_command))
+    application.add_handler(CommandHandler("cancel", cancel))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_url))
     application.add_handler(CallbackQueryHandler(button_callback))
     
